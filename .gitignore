@@ -1,0 +1,29 @@
+# Build artefacts
+build/
+*.o
+*.obj
+*.exe
+*.out
+cmake-build-*/
+
+# Data: regenerate from the committed generator + seed, never commit vendor data.
+# Only generator code and committed hashes belong in the repository.
+data/*
+!data/*.sha256
+!data/*.md
+
+# Measurement raw output is committed under results/ deliberately (all runs kept),
+# but per-run binary dumps are too large and are regenerated.
+results/raw/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
